@@ -71,7 +71,8 @@ class FacebookStrategy extends OpauthStrategy{
 			'redirect_uri'=> $this->strategy['redirect_uri'],
 			'code' => trim($_GET['code'])
 		);
-		$response = $this->serverGet($url, $params, null, $headers);
+		$options = isset($this->strategy['context_options']) ? $this->strategy['context_options'] : null;
+			$response = $this->serverGet($url, $params, $options, $headers);
 		$results = json_decode($response);
 
 		if (empty($results) || empty($results->access_token)) {
@@ -127,13 +128,14 @@ class FacebookStrategy extends OpauthStrategy{
 			$fields = $this->strategy['fields'];
 		}
 
+        $options = isset($this->strategy['context_options']) ? $this->strategy['context_options'] : null;
 		$me = $this->serverGet("https://graph.facebook.com/{$this->api_version}/me",
 			array(
 				'appsecret_proof' => hash_hmac('sha256', $access_token, $this->strategy['app_secret']),
 				'access_token' => $access_token,
 				'fields' => $fields
 			),
-			null,
+            $options,
 			$headers
 		);
 
