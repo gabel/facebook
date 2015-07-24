@@ -128,7 +128,7 @@ class FacebookStrategy extends OpauthStrategy{
 	 */
 	private function me($access_token){
 		$options = isset($this->strategy['context_options']) ? $this->strategy['context_options'] : null;
-        	$me = $this->serverGet('https://graph.facebook.com/me', array('access_token' => $access_token), $options,
+        	$me = $this->serverGet('https://graph.facebook.com/me', array('access_token' => $access_token), $options, $headers);
 		if (!empty($me)){
 			return json_decode($me);
 		}
