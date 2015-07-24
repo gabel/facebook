@@ -59,6 +59,7 @@ class FacebookStrategy extends OpauthStrategy{
 				'code' => trim($_GET['code'])
 			);
 			$options = isset($this->strategy['context_options']) ? $this->strategy['context_options'] : null;
+			
 			$response = $this->serverGet($url, $params, $options, $headers);
 			
 			parse_str($response, $results);
