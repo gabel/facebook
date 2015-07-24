@@ -135,10 +135,7 @@ class FacebookStrategy extends OpauthStrategy{
 				'appsecret_proof' => hash_hmac('sha256', $access_token, $this->strategy['app_secret']),
 				'access_token' => $access_token,
 				'fields' => $fields
-			),
-            $options,
-			$headers
-		);
+			), $options, $headers);
 
 		if (empty($me)){
 			$error = array(
