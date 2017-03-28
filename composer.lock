@@ -1,0 +1,73 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "e5a53e390181a79d47adc2522a4aa188",
+    "packages": [
+        {
+            "name": "opauth/opauth",
+            "version": "0.4.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/opauth/opauth.git",
+                "reference": "436fb98c2374c9e8ae4d8adddf83214bee4d9c72"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/opauth/opauth/zipball/436fb98c2374c9e8ae4d8adddf83214bee4d9c72",
+                "reference": "436fb98c2374c9e8ae4d8adddf83214bee4d9c72",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "suggest": {
+                "opauth/facebook": "Allows Facebook authentication",
+                "opauth/google": "Allows Google authentication",
+                "opauth/twitter": "Allows Twitter authentication"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "lib/Opauth/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "U-Zyn Chua",
+                    "email": "chua@uzyn.com",
+                    "homepage": "http://uzyn.com"
+                }
+            ],
+            "description": "Multi-provider authentication framework for PHP",
+            "homepage": "http://opauth.org",
+            "keywords": [
+                "Authentication",
+                "OpenId",
+                "auth",
+                "facebook",
+                "google",
+                "oauth",
+                "omniauth",
+                "twitter"
+            ],
+            "time": "2013-05-10T09:01:52+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.2.0"
+    },
+    "platform-dev": []
+}
